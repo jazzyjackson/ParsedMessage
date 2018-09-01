@@ -1,9 +1,17 @@
 # ParsedMessage
 ## A convenient improvement on http.IncomingMessage
 
-Pass this class into your http.createServer options and have convenient access to .url and .query properties.
+Pass this class into your http.createServer options and have convenient access to properties provided by url.parse including:
+```js
+.path
+.pathname
+.query // returns parsed object
+.search
+.hash
+```
 
 Compatible with Node ^9.6.0.
+
 See also: VerboseResponse
 
 ## Usage
@@ -17,7 +25,3 @@ http.createServer({
     IncomingMessage: "ParsedMessage"
 }, yourRequestHandlerHere)
 ```
-
-## Test
-Run `npm test` or `make test-all` to execute each file in the tests directory.
-
