@@ -1,6 +1,6 @@
 {
   "name": "parsedmessage",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ParsedMessage is an ultra-lightweight extension of IncomingMessage: url.parse and querystring.parse called via getter methods on .path, .query, and others",
   "main": "ParsedMessage.js",
   "scripts": {
@@ -11,12 +11,12 @@
     "url": "git+https://github.com/jazzyjackson/parsedmessage.git"
   },
   "keywords": [
-      "http",
-      "pipe",
-      "url",
-      "parsedUrl",
-      "querystring",
-      "query"
+    "http",
+    "pipe",
+    "url",
+    "parsedUrl",
+    "querystring",
+    "query"
   ],
   "author": "Colten Jackson",
   "license": "SEE LICENSE IN CONTINUITY.LICENSE",
