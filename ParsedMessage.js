@@ -3,8 +3,8 @@ let querystring = require('querystring')
 let url = require('url')
 
 module.exports = class ParsedMessage extends IncomingMessage {
-    constructor(){
-        super()
+    constructor(options){
+        super(options)
     }
 
     get path(){
