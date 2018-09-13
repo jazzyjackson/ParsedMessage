@@ -6,11 +6,11 @@ Since Node v9.6.0, http.createServer supports an options argument to override th
 http.createServer({
     IncomingMessage: require("ParsedMessage")
 }, (req, res) => {
-    req.path // url.parse(req.url).path
-    req.pathname // url.parse(req.url).pathname
-    req.query // querystring.parse(url.parse(req.url).query
-    req.search // url.parse(req.url).search
-    req.hash // url.parse(req.url).hash
+    req.path      // url.parse(req.url).path
+    req.pathname  // url.parse(req.url).pathname
+    req.query     // querystring.parse(url.parse(req.url).query
+    req.search    // url.parse(req.url).search
+    req.hash      // url.parse(req.url).hash
     req.parsedUrl // url.parse(req.url)
 }))
 ```
