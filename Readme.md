@@ -1,19 +1,7 @@
 # ParsedMessage
-## A convenient improvement on http.IncomingMessage
 
-Pass this class into your http.createServer options and have convenient access to properties provided by url.parse including:
-```js
-.path
-.pathname
-.query // returns parsed object
-.search
-.hash
-```
+Since Node v9.6.0, http.createServer supports an options argument to override the IncomingMessage and ServerResponse constructed for each request. Pass this class as `IncomingMessage` and have convenient access to properties provided by url.parse.
 
-### Usage
-Since Node v9.6.0, http.createServer supports an options argument to override the IncomingMessage and ServerResponse constructed for each request.
-
-`
 ```js
 http.createServer({
     IncomingMessage: require("ParsedMessage")
