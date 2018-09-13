@@ -14,8 +14,8 @@ http.createServer({
     req.parsedUrl // url.parse(req.url)
 }))
 ```
-Check out the [source code](/jazzyjackson/ParsedMessage/blob/master/ParsedMessage.js), it's very simple. I cache the result of url.parse so it's only called once, and only once you use one of the shortcuts.
+Check out the [source code](ParsedMessage.js), it's very simple. I cache the result of url.parse so it's only called once, and only once you use one of the shortcuts.
 
-See also: [Transflect](/mixint/Transflect), a Transform stream that can be piped from request to response: `req.pipe(new Transflect).pipe(res)`
+See also: [Transflect](http://github.com/mixint/Transflect), a Transform stream that can be piped from request to response: `req.pipe(new Transflect).pipe(res)`
 
-See also: [ServerFailSoft](/jazzyjackson/ServerFailSoft), an extension to ServerResponse that catches errors piped to it and closes the connection with an informative error.
+See also: [ServerFailSoft](http://github.com/jazzyjackson/ServerFailSoft), an extension to ServerResponse that catches errors piped to it and closes the connection with an informative error.
