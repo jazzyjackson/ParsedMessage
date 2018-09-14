@@ -1,5 +1,5 @@
 let {IncomingMessage} = require('http')
-let querystring = require('querystring')
+let qs = require('querystring')
 let url = require('url')
 let path = require('path')
 
