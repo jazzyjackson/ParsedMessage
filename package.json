@@ -1,6 +1,6 @@
 {
   "name": "parsedmessage",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "ParsedMessage is an ultra-lightweight extension of IncomingMessage: url.parse and querystring.parse called via getter methods on .path, .query, and others",
   "main": "ParsedMessage.js",
   "scripts": {
