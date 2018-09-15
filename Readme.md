@@ -14,9 +14,9 @@ http.createServer({
     req.parsedUrl  // url.parse(req.url)
     req.parsedPath // path.parse(req.pathname)
     req.root       // path.parse(req.pathname).root
-    req.dir       // path.parse(req.pathname).dir
+    req.dir        // path.parse(req.pathname).dir
     req.base       // path.parse(req.pathname).base
-    req.ext       // path.parse(req.pathname).ext
+    req.ext        // path.parse(req.pathname).ext
     req.name       // path.parse(req.pathname).name
 }))
 ```
