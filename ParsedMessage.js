@@ -1,16 +1,20 @@
-let {IncomingMessage} = require('http')
-let querystring = require('querystring')
-let url = require('url')
-let path = require('path')
+/* these are all node builtins */
+const url = require('url')
+const path = require('path')
+const http = require('http')
+const querystring = require('querystring')
 
 /**
  * @extends http.IncomingMessage
- * Adds
+ * Adds convenient getters to useful objects and properties based off IncomingMessage's .url property.
+ * Lazy evaluation: ParsedMessage performs no extra work until one of the properties is requested.
+ * The result of url.parse and path.parse is cached so further calls do as little work as possible.
  */
-module.exports = class ParsedMessage extends IncomingMessage {
+module.exports = class ParsedMessage extends http.IncomingMessage {
     constructor(options){ super(options) }
 
     /**
+     * @private
      * @param {String} urlString
      * Get the URL object, and then replace a couple properties
      * .pathname gets decoded (use .path for untouched prop)
