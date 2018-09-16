@@ -11,7 +11,7 @@ const querystring = require('querystring')
  * The result of url.parse and path.parse is cached so further calls do as little work as possible.
  */
 module.exports = class ParsedMessage extends http.IncomingMessage {
-    constructor(options){ super(options) }
+    constructor(req){ super(req) }
 
     /**
      * @private
