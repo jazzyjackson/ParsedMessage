@@ -14,21 +14,6 @@ module.exports = class ParsedMessage extends http.IncomingMessage {
     constructor(req){ super(req) }
 
     /**
-     * @private
-     * @param {String} urlString
-     * Get the URL object, and then replace a couple properties
-     * .pathname gets decoded (use .path for untouched prop)
-     * .query gets parsed into an object (use .search for untouched prop)
-     */
-    deepParse(urlString){
-        var halfParsed = url.parse(urlString)
-        return Object.assign(halfParsed, {
-            pathname : decodeURI(halfParsed.pathname),
-            query    : querystring.parse(halfParsed.query)
-        })
-    }
-
-    /**
      * Return parsedUrl if it already exists, otherwise create it:
      * call this.deepParse to get fully decoded properties
      * @returns {Object} parsedUrl
@@ -59,4 +44,20 @@ module.exports = class ParsedMessage extends http.IncomingMessage {
     get base(){ return this.parsedPath.base }
     get ext() { return this.parsedPath.ext  }
     get name(){ return this.parsedPath.name }
+
+    /**
+     * @private
+     * @param {String} urlString
+     * Get the URL object, and then replace a couple properties
+     * .pathname gets decoded (use .path for untouched prop)
+     * .query gets parsed into an object (use .search for untouched prop)
+     */
+    deepParse(urlString){
+        var halfParsed = url.parse(urlString)
+        return Object.assign(halfParsed, {
+            pathname : decodeURI(halfParsed.pathname),
+            query    : querystring.parse(halfParsed.query)
+        })
+    }
+
 }
