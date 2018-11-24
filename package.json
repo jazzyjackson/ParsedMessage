@@ -19,7 +19,7 @@
     "query"
   ],
   "author": "Colten Jackson",
-  "license": "SEE LICENSE IN CONTINUITY.LICENSE",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/jazzyjackson/ParsedMessage/issues"
   },
